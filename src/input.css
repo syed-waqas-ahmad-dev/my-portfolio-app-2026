@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+ @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes microBounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-6px);
+      }
+    }
+
+    @keyframes waveAnimation {
+      0%, 100% {
+        opacity: .8;
+        display: none;
+      }
+      50% {
+        opacity: 1;
+        display: flex;
+      }
+    }
+    
+    .animate-fade-in { animation: fadeIn 0.6s ease-in-out; }
+    .animate-slide-up { animation: slideUp 0.6s ease-out; }
+    .animate-slide-down { animation: slideDown 0.4s ease-out; }
+    .animate-float { animation: float 3s ease-in-out infinite; }
+    
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    .reveal.active {
+      animation: slideUp 0.6s ease-out forwards;
+    }
+    
+    /* Gradient text */
+    .gradient-text {
+      background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #10b981 0%, #2b4d40f6 95%);
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1a1a1a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #10b981;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #34d399;
+    }
+    * {
+      scrollbar-color: #10b981 #1a1a1a;
+      scrollbar-width: thin;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
