@@ -3,8 +3,8 @@
     "@tailwindcss/cli": "^4.2.2",
     "tailwindcss": "^4.2.2"
   },
- "scripts": {
-  "build": "npx @tailwindcss/cli -i ./public/input.css -o ./public/dist/output.css",
-  "dev": "npx @tailwindcss/cli -i ./public/input.css -o ./public/dist/output.css --watch"
-}
+  "scripts": {
+    "build": "tailwindcss -i ./public/input.css -o ./public/dist/output.css --minify",
+    "dev": "tailwindcss -i ./public/input.css -o ./public/dist/output.css --watch"
+  }
 }
